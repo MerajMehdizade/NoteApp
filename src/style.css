@@ -1,0 +1,24 @@
+@font-face {
+  font-family: diroz;
+  src: url(../public/Font/Dirooz.eot);
+  src: url(../public/Font/Dirooz.woff);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 1rem;
+  font-family: diroz;
+  background-color: lightgray;
+}
