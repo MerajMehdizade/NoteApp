@@ -13,3 +13,11 @@ a {
   text-decoration: none;
   color: black;
 }
+.action svg:nth-child(1) {
+  fill: #d70f0f;
+  cursor: pointer;
+}
+.action svg:nth-child(2) {
+  fill: #3194bf;
+  cursor: pointer;
+}
