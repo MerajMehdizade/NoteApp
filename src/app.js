@@ -14,7 +14,7 @@ const addNewTodo = (inputValue) => {
     let todoBox = $.createElement("div")
     let todoValue = $.createElement('h5')
     let iconElm = $.createElement("i")
-    todoBox.className = "border w-30 p-4 rounded-3 text-bold pointer d-flex justify-content-between items-center"
+    todoBox.className = "col-9 col-md-5 w-full border p-4 rounded-3 text-bold pointer d-flex justify-content-between items-center"
     iconElm.className = "bi bi-trash-fill text-danger h3 trashIcon"
     todoValue.innerHTML = inputValue
     todoContent.append(todoBox)
