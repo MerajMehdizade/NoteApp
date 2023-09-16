@@ -33,8 +33,3 @@ input:focus {
 .dark .text-box {
   color: white;
 }
-#theme {
-  position: fixed;
-  top: 53px;
-  left: 140px;
-}
