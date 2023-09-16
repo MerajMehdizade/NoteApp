@@ -18,7 +18,7 @@ let localTheme = localStorage.getItem("theme")
 
 function addTodo(value) {
   todoNameInput.classList.remove("border-danger")
-  if (value !== "") {
+  if (inputValue) {
     const todo = {
       id: Date.now(),
       text: value,
@@ -91,14 +91,12 @@ todoNameInput.addEventListener('keyup', (event) => {
   inputValue = event.target.value
   if (event.keyCode === 13) {
     addTodo(inputValue)
-    resetInputValue()
     inputValue = ""
   }
 })
 
 todoAddIcon.addEventListener("click", () => {
   addTodo(inputValue)
-  resetInputValue()
   inputValue = ""
 })
 
