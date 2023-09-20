@@ -24,7 +24,7 @@ input:focus {
   text-decoration: line-through;
 }
 
-.dark body {
+.dark{
   background-color: #161616;
 }
 .dark .title {

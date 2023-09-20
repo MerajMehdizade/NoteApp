@@ -23,7 +23,6 @@ function addTodo(value) {
       id: Date.now(),
       text: value,
       completed: false,
-      remove: false
     };
     todos.push(todo);
     localStorage.setItem("todos", JSON.stringify(todos));
@@ -72,14 +71,13 @@ function renderTodos() {
     })
     todoContent.appendChild(todoBox);
   });
-
-  if (localTheme == "dark") {
-    $.querySelector('html').classList.add("dark")
-    themeToogle.className = 'bi bi-moon text-light pointer h2'
-  } else if (localTheme == 'light') {
-    $.querySelector('html').classList.remove("dark")
-    themeToogle.className = 'bi bi-sun text-info pointer h2'
-  }
+}
+if (localTheme == "dark") {
+  $.body.classList.add("dark")
+  themeToogle.className = 'bi bi-moon text-light pointer h2'
+} else {
+  $.body.classList.remove("dark")
+  themeToogle.className = 'bi bi-sun text-info pointer h2'
 }
 
 const resetInputValue = () => {
@@ -106,12 +104,12 @@ todoResetIcon.addEventListener("click", () => {
 })
 themeToogle.addEventListener("click", () => {
   if (!darkMode) {
-    $.querySelector('html').classList.add("dark")
+    $.body.classList.add("dark")
     darkMode = !darkMode
     themeToogle.className = 'bi bi-moon text-light pointer h2'
     localStorage.setItem("theme", "dark")
   } else {
-    $.querySelector('html').classList.remove("dark")
+    $.body.classList.remove("dark")
     darkMode = !darkMode
     themeToogle.className = 'bi bi-sun text-info pointer h2'
     localStorage.setItem("theme", "light")
