@@ -23,6 +23,7 @@ function addTodo(value) {
       id: Date.now(),
       text: value,
       completed: false,
+      remove: false
     };
     todos.push(todo);
     localStorage.setItem("todos", JSON.stringify(todos));
@@ -32,7 +33,6 @@ function addTodo(value) {
     todoNameInput.classList.add("border-danger")
   }
 }
-
 function renderTodos() {
   todoContent.innerHTML = "";
   todos.forEach((todo) => {
@@ -64,8 +64,9 @@ function renderTodos() {
       renderTodos();
     });
 
-    trashIcon.addEventListener("click", (e) => {
-      e.target.parentElement.parentElement.remove()
+
+    trashIcon.addEventListener("click", () => {
+      todos = todos.filter((item) => item.id !== todo.id);
       localStorage.setItem("todos", JSON.stringify(todos));
       renderTodos();
     })
