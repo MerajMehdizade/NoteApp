@@ -21,4 +21,6 @@ This is a todolist to manage your tasks
 
 ### Different sections :
 
-![StoreCard](https://github.com/MerajMehdizade/StoreCard/assets/105376555/a33661d5-81f2-4072-acca-afb262e19b52)
+![TodoList-dark](https://github.com/MerajMehdizade/TodoList/assets/105376555/e6950f0a-1d14-40f3-ae78-880f1e18bca0)
+
+![TodoList-light](https://github.com/MerajMehdizade/TodoList/assets/105376555/60b07526-708e-4294-ab7b-ccb00d988e7e)
