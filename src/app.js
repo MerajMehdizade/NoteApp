@@ -41,7 +41,7 @@ function renderTodos() {
     let todoValue = $.createElement('h5')
     let completedIcon = $.createElement("i")
     let trashIcon = $.createElement("i")
-    todoBox.className = "col-9 w-full border p-4 rounded-3 text-bold pointer d-flex justify-content-between items-center text-box"
+    todoBox.className = "col-9 w-full border p-4 rounded-3 text-bold pointer d-flex justify-content-between items-center text-box text-break"
     icons.className = "d-flex items-center gap-3"
     completedIcon.className = "bi bi-check2 text-success h2"
     trashIcon.className = "bi bi-trash2 text-danger h2"
