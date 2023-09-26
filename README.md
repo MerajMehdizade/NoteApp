@@ -77,7 +77,3 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 - Instagram - [@merajmdzz](https://www.instagram.com/merajmdzz/)
 - telegram - [@merajmdzz](https://t.me/merajmdzz)
 - Twitter -[@MerajMdz81881](https://twitter.com/MerajMdz81881)
-
-![TodoList-light](https://github.com/MerajMehdizade/TodoList/assets/105376555/60b07526-708e-4294-ab7b-ccb00d988e7e)
-
-![TodoList-dark](https://github.com/MerajMehdizade/TodoList/assets/105376555/e6950f0a-1d14-40f3-ae78-880f1e18bca0)
