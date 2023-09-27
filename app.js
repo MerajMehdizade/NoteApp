@@ -72,13 +72,6 @@ function renderTodos() {
     todoContent.appendChild(todoBox);
   });
 }
-if (localTheme == "dark") {
-  $.body.classList.add("dark")
-  themeToogle.className = 'bi bi-moon text-light pointer h2'
-} else {
-  $.body.classList.remove("dark")
-  themeToogle.className = 'bi bi-sun text-info pointer h2'
-}
 
 const resetInputValue = () => {
   todoNameInput.value = ''
@@ -102,19 +95,31 @@ todoAddIcon.addEventListener("click", () => {
 todoResetIcon.addEventListener("click", () => {
   resetInputValue()
 })
-themeToogle.addEventListener("click", () => {
+
+if (localTheme === "dark" || localTheme === "light") {
+  $.body.classList.toggle("dark", localTheme === "dark");
+  themeToogle.className = localTheme === "dark" ? 'bi bi-moon text-light pointer h2' : 'bi bi-sun text-info pointer h2';
+} else {
+  $.body.classList.remove("dark");
+  themeToogle.className = 'bi bi-sun text-info pointer h2';
+  localStorage.setItem("theme", "light");
+}
+
+function toggleTheme() {
   if (!darkMode) {
-    $.body.classList.add("dark")
-    darkMode = !darkMode
-    themeToogle.className = 'bi bi-moon text-light pointer h2'
-    localStorage.setItem("theme", "dark")
+    $.body.classList.add("dark");
+    themeToogle.className = 'bi bi-moon text-light pointer h2';
+    localStorage.setItem("theme", "dark");
   } else {
-    $.body.classList.remove("dark")
-    darkMode = !darkMode
-    themeToogle.className = 'bi bi-sun text-info pointer h2'
-    localStorage.setItem("theme", "light")
+    $.body.classList.remove("dark");
+    themeToogle.className = 'bi bi-sun text-info pointer h2';
+    localStorage.setItem("theme", "light");
   }
-})
+}
+themeToogle.addEventListener("click", () => {
+  darkMode = !darkMode;
+  toggleTheme();
+});
 
 renderTodos();
 
